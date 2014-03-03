@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HotDeals</title>
+
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.0.2/cerulean/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.2/css/font-awesome.min.css">
+
+  <style>
+    body {
+      padding-top: 50px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  </style>
+
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<%= yield %>
+
+  <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to "e-Hotdeals", "http://localhost:3000", :class => "navbar-brand" %>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/categories?cat=Tablet">Tablet</a></li>
+        <li><a href="/products?cat=Cellphone">Cellphone</a></li>
+        <li><a href="/products?cat=Other">Search</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <% user = User.find_by(:id => session[:user_id]) %>
+        <% if user.present? %>
+          <li><a href="">Hi, <%= user.first_name %>!</a></li>
+        <% end %>
+
+        <li><a href="/users/new">Sign Up</a></li>
+        <li><a href="/login">Sign In</a></li>
+
+        <% if user.present? %>
+        <li><a href="/users/<%= user.id %>/show">My Profile</a></li>
+        <li><a href="/logout">Sign Out</a></li>
+        <% end %>
+
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </nav>
+
+
+</body>
+</html>

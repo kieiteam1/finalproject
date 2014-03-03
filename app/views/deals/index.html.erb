@@ -1,0 +1,44 @@
+<!-- <h1>Deals#index</h1> -->
+
+<div class="page-header">
+  <%= link_to "Add a New Deal", "/deals/new", :class => "btn btn-md btn-success pull-right" %>
+
+<!-- # Today's hotdeals -->
+<h2>Today's hotdeals</h2>
+</div>
+
+
+
+<% @deal_list.each do |deal| %>
+  <div class="row container">
+    <div class="col-md-4" style="height:200px">
+      <h4><a href="/deals/<%= deal.id %>/show"><%= deal.name %></a></h4>
+      <h5><%= deal.description %></h5>
+      <button type="button" class="pull-right">
+      <%= link_to "Deal Link", "#{deal.link}" %>
+    </div>
+<% end %>
+  </div>
+
+<!-- # Recommended deals -->
+<div class="page-header">
+    <h2>Deals might fit you</h2>
+</div>
+
+  <div class="row container">
+    <div class="col-md-4">
+      <h3><a href="/deals/ipad/">ipad</a></h3>
+      <h5>aaabbbccc</h5>
+    </div>
+    <div class="col-md-4">
+      <h3><a href="/deals/ipad/">ipad</a></h3>
+      <h5>aaabbbccc</h5>
+    </div>
+    <div class="col-md-4">
+      <h3><a href="/deals/ipad/">ipad</a></h3>
+      <h5>aaabbbccc</h5>
+    </div>
+  </div>
+
+
+
