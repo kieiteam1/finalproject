@@ -1,7 +1,18 @@
 Blog::Application.routes.draw do
 
+
+  get "/sessions/new" => "sessions#new"
+  get "/sessions/create" => "sessions#create"
+
+
+#Users
   get "/users/new" => "users#new"
   get "/users/create" => "users#create"
+  get "users/:user_id/show" => "users#show"
+
+#Deals
+  get "deals/index" => "deals#index"
+  get "/" => "deals#index"
 
   #CREATE
   get "/deals/new" => "deals#new"
@@ -18,11 +29,12 @@ Blog::Application.routes.draw do
   #DELETE
   get "/deals/:deal_id/delete" => "deals#delete"
 
+  get "about/index" => "about#index"
 
-  get "categories/index"
+
   get "products/index"
   get "reviews/index"
-  get "deals/index"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

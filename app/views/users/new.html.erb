@@ -1,0 +1,40 @@
+<div class="page-header">
+  <h3>Sign Up</h3>
+</div>
+
+<form action="/users/create" class="col-md-3">
+<label class="control-label">
+  <div class="form-group">
+    <label>Enter your First Name:</label>
+    <input name="first_name" type="text" class="form-control input-sm" placeholder="First name...">
+  </div>
+  <div class="form-group">
+    <label>Enter your Last Name:</label>
+    <input name="last_name" type="text" class="form-control input-sm" placeholder="Last name...">
+  </div>
+  <div class="form-group">
+    <label>Enter your email address:</label>
+    <input name="email" type="text" class="form-control input-sm" placeholder="Email address...">
+  </div>
+  <div class="form-group">
+    <label>Enter a Password:</label>
+    <input name="password" type="text" class="form-control input-sm" placeholder="Set a secure password">
+  </div>
+  <div class="form-group">
+    <label>Enter your zipcode to find the nearest deals:</label>
+    <input name="zipcode" type="integer" class="form-control input-sm" placeholder="Zipcode...">
+  </div>
+  <div class="form-group">
+    <label>Choose your prefered category to find hotdeals:</label>
+    <%= select_tag "prf_category_id", options_for_select([['Tablet', 1], ['CellPhone', 2]]) %>
+  </div>
+  <div class="form-group">
+    <label>Choose your prefered product to find hotdeals:</label>
+    <%= select_tag "prf_product_id", options_for_select([['iPad', 1], ['Nexus7', 2], ['Galaxy3', 3]]) %>
+  </div>
+</label>
+
+  <button type="submit" class="btn btn-success btn-md">Sign Up!</button>
+  or
+  <%= link_to "Cancel", "/" %>
+</form>

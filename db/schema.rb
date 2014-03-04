@@ -41,9 +41,10 @@ ActiveRecord::Schema.define(version: 20140301041738) do
   end
 
   create_table "users", force: true do |t|
-    t.string   "name"
-    t.string   "password"
+    t.string   "first_name"
+    t.string   "last_name"
     t.string   "email"
+    t.string   "password"
     t.integer  "zipcode"
     t.integer  "prf_category_id"
     t.integer  "prf_product_id"

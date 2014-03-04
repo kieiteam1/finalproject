@@ -4,11 +4,12 @@ class DealsController < ApplicationController
     if params[:cat].present?
       filter_category = Category.find_by(:name => params[:cat])
       @deal_list = Deal.all.where(:category_id => filter_category.id)
-      @deal_list = @product_list.order('id desc')
+      @deal_list = @deal_list.order('id desc')
     else
       @deal_list = Deal.all.order('id desc')
     end
-      @deal_list = @deal_list.order('created_at desc')
+
+      @deal_list = @deal_list.order('updated_at desc')
       @deal_list = @deal_list.limit(3)
   end
 
@@ -24,7 +25,6 @@ class DealsController < ApplicationController
     deal.deal_price = params["deal_price"]
     deal.save
     redirect_to "/deals/index"
-
   end
 
 end

@@ -8,37 +8,42 @@
 
 
 User.destroy_all
-user_list = [       { :name => "Wooil",
-                      :password => "letmein",
+user_list = [       { :first_name => "Wooil",
+                      :last_name => "Shin",
                       :email => "wshin20@kellogg.northwestern.edu",
+                      :password => "W",
                       :zipcode => 10219,
                       :prf_category_id => 1,
                       :prf_product_id => 1,
                       },
-                    { :name => "dylan",
-                      :password => "letmein",
+                    { :first_name => "Dylan",
+                      :last_name => "Jeon",
                       :email => "dylan@dylan.northwestern.edu",
+                      :password => "D",
                       :zipcode => 10219,
                       :prf_category_id => 2,
                       :prf_product_id => 1,
                       },
-                    { :name => "jumpei",
-                      :password => "letmein",
+                    { :first_name => "Jumpei",
+                      :last_name => "Nakamura",
                       :email => "jumpei@jumpei.northwestern.edu",
+                      :password => "J",
                       :zipcode => 10219,
                       :prf_category_id => 1,
                       :prf_product_id => 2,
                       },
-                    { :name => "jeffcohen",
-                      :password => "qwer1234",
+                    { :first_name => "Jeff",
+                      :last_name => "Cohen",
                       :email => "jazzyjeff@j.northwestern.edu",
+                      :password => "qwer1234",
                       :zipcode => 60219,
                       :prf_category_id => 1,
                       :prf_product_id => 4,
                       },
-                    { :name => "brian",
-                      :password => "1111",
+                    { :first_name => "Brian",
+                      :last_name => "Eng",
                       :email => "brian@northwestern.edu",
+                      :password => "1111",
                       :zipcode => 10219,
                       :prf_category_id => 2,
                       :prf_product_id => 3,
@@ -47,9 +52,10 @@ user_list = [       { :name => "Wooil",
 
   user_list.each do |user_list|
    u = User.new
-   u.name = user_list[:name]
-   u.password = user_list[:password]
+   u.first_name = user_list[:first_name]
+   u.last_name = user_list[:last_name]
    u.email = user_list[:email]
+   u.password = user_list[:password]
    u.zipcode = user_list[:zipcode]
    u.prf_category_id = user_list[:prf_category_id]
    u.prf_product_id = user_list[:prf_product_id]
