@@ -4,16 +4,17 @@ class DealsController < ApplicationController
     if params[:cat].present?
       filter_category = Category.find_by(:name => params[:cat])
       @deal_list = Deal.all.where(:category_id => filter_category.id)
-      @deal_list = @deal_list.order('id desc')
+      @deal_list = @deal_list.order('updated_at desc')
     else
-      @deal_list = Deal.all.order('id desc')
+      @deal_list = Deal.all.order('updated_at desc')
+      @deal_list = @deal_list.limit(3)
     end
 
       @deal_list = @deal_list.order('updated_at desc')
       @deal_list = @deal_list.limit(3)
   end
 
-  def create
+  def new
     deal = Deal.new
     deal.name = params["name"]
     deal.description = params["description"]

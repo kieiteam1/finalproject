@@ -1,9 +1,11 @@
 Blog::Application.routes.draw do
 
 
+  get "deals/new"
+  get "sessions/destroy"
   get "/sessions/new" => "sessions#new"
   get "/sessions/create" => "sessions#create"
-
+  get "/sessions/destroy" => "sessions#destroy"
 
 #Users
   get "/users/new" => "users#new"

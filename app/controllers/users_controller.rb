@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     user.prf_category_id = params["prf_category_id"]
     user.prf_product_id = params["prf_product_id"]
     user.save
-    redirect_to "/"
+    redirect_to "/sessions/create", notice: "Welcome!"
   end
 
   def update
