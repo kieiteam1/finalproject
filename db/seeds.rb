@@ -95,19 +95,31 @@ puts "There are now #{Category.count} categories in the database."
 
 
 Product.destroy_all
-product_list = [   { :name => "iPad Tablet",
-                     :category_id =>
+product_list = [   { :name => "Nexus 7",
+                     :category_id => 1,
                       },
-                    { :name => "CellPhone",
+                   { :name => "Kindle Fire HDX",
+                     :category_id => 1,
+                      },
+                   { :name => "Samsung Galaxy Tab",
+                     :category_id => 1,
+                      },
+                   { :name => "iPhone 4",
+                     :category_id => 2,
+                      },
+                   { :name => "Samsung Galaxy S",
+                     :category_id => 2,
+                      },
+                   { :name => "Motorola MOTOLUXE XT615",
+                     :category_id => 2,
                       },
                     ]
 
-
-
-["iPad Air", "iPad", "Nexus 7"].each do |product_name|
-  c = Product.new
-  c.name = product_name
-  c.save
+product_list.each do |product_list|
+  p = Product.new
+  p.name = product_list[:name]
+  p.category_id = product_list[:category_id]
+  p.save
 end
 
 puts "There are now #{Product.count} products in the database."
@@ -132,27 +144,8 @@ deal_list = [       { :name => "Google Nexus 7 Tablet (7-Inch, 32GB, Black) by A
                       :description => "World sharpest 7 tablet screen (323 ppi). Powerful battery, up to 9 hrs of active use. Quad-core speed and performance, 2GB RAMs with Android 4.3.",
                       :link => "http://google.com"
                     },
-                     {:name => "Blackberry Playbook 7-Inch Tablet (64GB)",
-                      :original_price => 244,
-                      :deal_price => 200,
-                      :product_id => 3,
-                      # :category_id => 1,
-                      :image_url => 'http://ecx.images-amazon.com/images/I/411jQXFbXYL._AA160_.jpg',
-                      :description => "7 inch multi-touch LCD, 1024 x 600-pixel resolution",
-                      :link => "http://google.com"
-                    },
 
-                    { :name => "Dragon touch 7, Dual core, 16GB, Tablet, 2011",
-                      :original_price => 73,
-                      :deal_price => 70,
-                      :product_id => 4,
-                      # :category_id => 1,
-                      :image_url => 'http://ecx.images-amazon.com/images/I/51P58UoM4fL._SL1500_.jpg',
-                      :description => "7 Inch Multi-touch screen (1024x600),Google Android 4.1 (Jelly Bean)",
-                      :link => "http://google.com"
-                    },
-
-                    { :name => "Samsung T211 Galaxy Tab 3 lite",
+                    { :name => "Samsung Galaxy Tab 3 lite",
                       :original_price => 260,
                       :deal_price => 200,
                       :product_id => 5,
@@ -171,15 +164,15 @@ deal_list = [       { :name => "Google Nexus 7 Tablet (7-Inch, 32GB, Black) by A
                       :description => "Size 16 GB, CDMA Verizon phone only, does NOT have a SIM card",
                       :link => "http://google.com"
                     },
-                    { :name => "Blackberry Z10 16GB Unlocked GSM Phone with BlackBerry 10 OS",
-                      :original_price => 270,
-                      :deal_price => 200,
-                      :product_id => 2,
-                      # :category_id => 2,
-                      :image_url => 'http://ecx.images-amazon.com/images/I/31hvQYvzokL._AA160_.jpg',
-                      :description => "Dual-Core Processor, 4.2 Touchscreen, 8MP Camera, Secondary 2MP Camera",
-                      :link => "http://google.com"
-                    },
+                    # { :name => "Blackberry Z10 16GB Unlocked GSM Phone with BlackBerry 10 OS",
+                    #   :original_price => 270,
+                    #   :deal_price => 200,
+                    #   :product_id => 2,
+                    #   # :category_id => 2,
+                    #   :image_url => 'http://ecx.images-amazon.com/images/I/31hvQYvzokL._AA160_.jpg',
+                    #   :description => "Dual-Core Processor, 4.2 Touchscreen, 8MP Camera, Secondary 2MP Camera",
+                    #   :link => "http://google.com"
+                    # },
                     { :name => "Blackberry Torch 9860 Phone",
                       :original_price => 137,
                       :deal_price => 130,

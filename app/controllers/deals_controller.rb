@@ -5,6 +5,7 @@ class DealsController < ApplicationController
       filter_category = Category.find_by(:name => params[:cat])
       filter_product = Product.find_by(:category_id => filter_category.id)
       @deal_list = Deal.find_by(:product_id => filter_product.id)
+      redirect_to
 
       SHOULD NEED TO CHANGE SEED BEFORE DO THIS
 
