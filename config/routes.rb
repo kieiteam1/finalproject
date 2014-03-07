@@ -1,8 +1,5 @@
 Blog::Application.routes.draw do
 
-
-  get "deals/new"
-  get "sessions/destroy"
   get "/sessions/new" => "sessions#new"
   get "/sessions/create" => "sessions#create"
   get "/sessions/destroy" => "sessions#destroy"
@@ -10,10 +7,10 @@ Blog::Application.routes.draw do
 #Users
   get "/users/new" => "users#new"
   get "/users/create" => "users#create"
-  get "users/:user_id/show" => "users#show"
+  get "/users/:user_id/show" => "users#show"
 
 #Deals
-  get "deals/index" => "deals#index"
+  get "/deals/index" => "deals#index"
   get "/" => "deals#index"
 
   #CREATE

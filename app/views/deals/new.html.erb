@@ -1,2 +1,28 @@
-<h1>Deals#new</h1>
-<p>Find me in app/views/deals/new.html.erb</p>
+<h3>Add a New Deal!</h3>
+
+<form action="/deals/create" class="col-md-3">
+    <label>Deal name:</label>
+    <input type="text" name="name" class="form-control input-sm" placeholder="Deal name...">
+    <br>
+    <label>Description:</label>
+    <input type="text" name="description" class="form-control input-sm" placeholder="Deal description">
+    <br>
+    <label>Original price:</label>
+    <input type="integer" name="original_price" class="form-control input-sm" placeholder="Original price">
+    <br>
+    <label>Deal price:</label>
+    <input type="integer" name="deal_price" class="form-control input-sm" placeholder="Deal price">
+    <br>
+    <label>Product id: (iPad=1, Nexus 7=2, Others=3)</label>
+    <input type="integer" name="product_id" class="form-control input-sm" placeholder="Product id">
+    <br>
+    <label>Image URL:</label>
+    <input type="text" name="image_url" class="form-control input-sm" placeholder="Image_url">
+    <br>
+    <label>Deal link (URL):</label>
+    <input type="text" name="link" class="form-control input-sm" placeholder="Deal link (URL)">
+    <br>
+
+    <input type="submit" class="btn btn-success btn-md pull-right">
+</form>
+

@@ -27,11 +27,24 @@
       text-align: left;
       }
 
+    .original_price {
+    text-decoration: line-through;
+    }
+
+    .deal_price {
+    font-weight: bold;
+    color: red;
+    font-size: 150  %;
+    }
+
+
   </style>
 
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+
+
 
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
 
@@ -40,6 +53,7 @@
 <body>
 
 <%= yield %>
+
 
   <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -56,11 +70,10 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="/">Home</a></li>
         <li><a href="/about/index">About</a></li>
         <li><a href="/deals?cat=Tablet">Tablet</a></li>
         <li><a href="/deals?cat=Cellphone">Cellphone</a></li>
-        <li><a href="/deals?cat=Other">Search</a></li>
+        <li><a href="/deals?cat=Other">Other</a></li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
@@ -76,6 +89,7 @@
       </ul>
     </div><!-- /.navbar-collapse -->
   </nav>
+
 
 </body>
 </html>

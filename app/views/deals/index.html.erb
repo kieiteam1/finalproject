@@ -12,6 +12,10 @@
       <h4><a href="/deals/<%= deal.id %>/show"><%= deal.name %></a></h4>
       <div class="col-md-3">
         <h5><img src="<%= deal.image_url %>" width="60"></h5>
+
+        <p><span class="original_price">$<%= deal.original_price %></span></p>
+        <p><span class="deal_price">$<%= deal.deal_price %></span></p>
+
         <button type="button"  "pull-right" class="btn btn-info">
           <%= link_to "Show details", "#{deal.link}" %>
         </button>
@@ -34,6 +38,10 @@
       <h4><a href="/deals/<%= deal.id %>/show"><%= deal.name %></a></h4>
       <div class="col-md-3">
         <h5><img src="<%= deal.image_url %>" width="60"></h5>
+
+        <p><span class="original_price">$<%= deal.original_price %></span></p>
+        <p><span class="deal_price">$<%= deal.deal_price %></span></p>
+
         <button type="button"  "pull-right" class="btn btn-info">
           <%= link_to "Show details", "#{deal.link}" %>
         </button>

@@ -5,9 +5,9 @@ class CreateDeals < ActiveRecord::Migration
       t.integer :original_price
       t.integer :deal_price
       t.integer :product_id
-      t.integer :category_id
       t.string :image_url
       t.string :description
+      t.integer :user_id
       t.string :link
 
       t.timestamps
