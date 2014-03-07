@@ -3,14 +3,8 @@ class DealsController < ApplicationController
   def index
     if params[:cat].present?
       filter_category = Category.find_by(:name => params[:cat])
-      filter_product = Product.find_by(:category_id => filter_category.id)
-      @deal_list = Deal.find_by(:product_id => filter_product.id)
-      redirect_to
-
-      SHOULD NEED TO CHANGE SEED BEFORE DO THIS
-
-      # @deal_list = Deal.all.where(:category_id => filter_category.id)
-      # @deal_list = @deal_list.order('updated_at desc')
+      @deal_list = Deal.all.where(:category_id => filter_category.id)
+      @deal_list = @deal_list.order('updated_at desc')
     else
       @deal_list = Deal.all.order('updated_at desc')
       @deal_list = @deal_list.limit(3)
@@ -18,6 +12,22 @@ class DealsController < ApplicationController
 
       @deal_list = @deal_list.order('updated_at desc')
       @deal_list = @deal_list.limit(3)
+
+    #   filter_category = Category.find_by(:name => params[:cat])
+    #   filter_product = Product.find_by(:category_id => filter_category.id)
+    #   # @filter_deal_list = Deal.all.where(:product_id => filter_product.id)
+    #   # @filter_deal_list = Deal.find_by(:product_id => filter_product.id)
+    #   redirect_to
+
+    #   # @deal_list = Deal.all.where(:category_id => filter_category.id)
+    #   # @deal_list = @deal_list.order('updated_at desc')
+    # else
+    #   @deal_list = Deal.all.order('updated_at desc')
+    #   @deal_list = @deal_list.limit(3)
+    # end
+
+      # @filter_deal_list = @filter_deal_list.order('updated_at desc')
+      # @filter_deal_list = @filter_deal_list.limit(3)
   end
 
   def new

@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20140301041738) do
     t.integer  "original_price"
     t.integer  "deal_price"
     t.integer  "product_id"
+    t.integer  "category_id"
     t.string   "image_url"
     t.string   "description"
     t.integer  "user_id"
@@ -35,7 +36,6 @@ ActiveRecord::Schema.define(version: 20140301041738) do
   create_table "products", force: true do |t|
     t.string   "name"
     t.integer  "category_id"
-    t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

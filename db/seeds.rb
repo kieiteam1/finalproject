@@ -81,7 +81,9 @@ puts "There are now #{User.count} users in the database."
 Category.destroy_all
 category_list = [   { :name => "Tablet",
                       },
-                    { :name => "CellPhone",
+                    { :name => "Cellphone",
+                      },
+                    { :name => "Other",
                       },
                     ]
 
@@ -113,6 +115,9 @@ product_list = [   { :name => "Nexus 7",
                    { :name => "Motorola MOTOLUXE XT615",
                      :category_id => 2,
                       },
+                   { :name => "Garmin nüvi 40LM",
+                     :category_id => 3,
+                      },
                     ]
 
 product_list.each do |product_list|
@@ -130,7 +135,7 @@ deal_list = [       { :name => "Google Nexus 7 Tablet (7-Inch, 32GB, Black) by A
                       :original_price => 269,
                       :deal_price => 239,
                       :product_id => 1,
-                      # :category_id => 1,
+                      :category_id => 1,
                       :image_url => 'http://ecx.images-amazon.com/images/I/31rWhdb1fXL.jpg',
                       :description => "World's sharpest 7 tablet screen (323 ppi). Powerful battery, up to 9 hrs of active use. Quad-core speed and performance, 2GB RAMs with Android 4.3.",
                       :link => "http://google.com"
@@ -139,7 +144,7 @@ deal_list = [       { :name => "Google Nexus 7 Tablet (7-Inch, 32GB, Black) by A
                       :original_price => 269,
                       :deal_price => 239,
                       :product_id => 2,
-                      # :category_id => 1,
+                      :category_id => 1,
                       :image_url => 'http://ecx.images-amazon.com/images/I/31rWhdb1fXL.jpg',
                       :description => "World sharpest 7 tablet screen (323 ppi). Powerful battery, up to 9 hrs of active use. Quad-core speed and performance, 2GB RAMs with Android 4.3.",
                       :link => "http://google.com"
@@ -149,7 +154,7 @@ deal_list = [       { :name => "Google Nexus 7 Tablet (7-Inch, 32GB, Black) by A
                       :original_price => 260,
                       :deal_price => 200,
                       :product_id => 5,
-                      # :category_id => 1,
+                      :category_id => 1,
                       :image_url => 'http://ecx.images-amazon.com/images/I/41rTQCo5K5L._SY355_.jpg',
                       :description => "Weight 3g, 850/1900 Whitensity (323 PPI)",
                       :link => "http://google.com"
@@ -159,7 +164,7 @@ deal_list = [       { :name => "Google Nexus 7 Tablet (7-Inch, 32GB, Black) by A
                       :original_price => 214,
                       :deal_price => 120,
                       :product_id => 1,
-                      # :category_id => 2,
+                      :category_id => 2,
                       :image_url => 'http://ecx.images-amazon.com/images/I/41eVAfYDANL._SL500_AA300_.jpg',
                       :description => "Size 16 GB, CDMA Verizon phone only, does NOT have a SIM card",
                       :link => "http://google.com"
@@ -177,7 +182,7 @@ deal_list = [       { :name => "Google Nexus 7 Tablet (7-Inch, 32GB, Black) by A
                       :original_price => 137,
                       :deal_price => 130,
                       :product_id => 3,
-                      # :category_id => 2,
+                      :category_id => 2,
                       :image_url => 'http://ecx.images-amazon.com/images/I/41G5JYQ%2BRsL._AA160_.jpg',
                       :description => "4GB Internal Memory, Blackberry OS 7, 3G and 5MP Camera",
                       :link => "http://google.com"
@@ -186,7 +191,7 @@ deal_list = [       { :name => "Google Nexus 7 Tablet (7-Inch, 32GB, Black) by A
                       :original_price => 244,
                       :deal_price => 200,
                       :product_id => 4,
-                      # :category_id => 2,
+                      :category_id => 2,
                       :image_url => 'http://ecx.images-amazon.com/images/I/51%2Bsi3hm8LL._SX385_.jpg',
                       :description => "Dual SIM, Android 4.0 OS4, Touchscreen, GPS",
                       :link => "http://google.com"
@@ -195,7 +200,7 @@ deal_list = [       { :name => "Google Nexus 7 Tablet (7-Inch, 32GB, Black) by A
                       :original_price => 199,
                       :deal_price => 180,
                       :product_id => 5,
-                      # :category_id => 2,
+                      :category_id => 2,
                       :image_url => 'http://ecx.images-amazon.com/images/I/512%2BzQfSV7L._AA160_.jpg',
                       :description => "Touchscreen, Android 2.3 OS, 8MP",
                       :link => "http://google.com"
@@ -204,7 +209,7 @@ deal_list = [       { :name => "Google Nexus 7 Tablet (7-Inch, 32GB, Black) by A
                       :original_price => 89,
                       :deal_price => 80,
                       :product_id => 1,
-                      # :category_id => 3,
+                      :category_id => 3,
                       :image_url => 'http://ecx.images-amazon.com/images/I/512nvv9FmeL._AA160_.jpg',
                       :description => "Lifetime maps, data cards: microSD,Speed limit indicator",
                       :link => "http://google.com"
@@ -217,7 +222,7 @@ deal_list = [       { :name => "Google Nexus 7 Tablet (7-Inch, 32GB, Black) by A
    d.original_price = deal[:original_price]
    d.deal_price = deal[:deal_price]
    d.product_id = deal[:product_id]
-   # d.category_id = deal[:category_id]
+   d.category_id = deal[:category_id]
    d.image_url = deal[:image_url]
    d.description = deal[:description]
    d.link = deal[:link]
