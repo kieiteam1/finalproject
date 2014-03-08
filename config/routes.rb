@@ -1,6 +1,6 @@
 Blog::Application.routes.draw do
 
-  get "deals/category_list"
+
   get "/sessions/new" => "sessions#new"
   get "/sessions/create" => "sessions#create"
   get "/sessions/destroy" => "sessions#destroy"
@@ -13,6 +13,7 @@ Blog::Application.routes.draw do
 #Deals
   get "/deals/index" => "deals#index"
   get "/" => "deals#index"
+  get "/deals/:category_id/category_list" => "deals#category_list"
 
   #CREATE
   get "/deals/new" => "deals#new"

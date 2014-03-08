@@ -5,6 +5,7 @@ class DealsController < ApplicationController
       filter_category = Category.find_by(:name => params[:cat])
       @deal_list = Deal.all.where(:category_id => filter_category.id)
       @deal_list = @deal_list.order('updated_at desc')
+      redirect_to "/deals/:cat/category_list"
     else
       @deal_list = Deal.all.order('updated_at desc')
       @deal_list = @deal_list.limit(3)
