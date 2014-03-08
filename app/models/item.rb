@@ -1,4 +1,4 @@
-class Amazon < ActiveRecord::Base
+# class Amazon < ActiveRecord::Base
 
 class Item
   attr_accessor :asin, :title, :image, :url
@@ -8,6 +8,4 @@ class Item
     @url = url
     @image = image
   end
-end
-
 end

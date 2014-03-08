@@ -5,10 +5,10 @@ require File.expand_path('../application', __FILE__)
 Blog::Application.initialize!
 
 require 'amazon/ecs'
-Amazon::Ecs.debug = true
+Amazon::Ecs.debug = false
 Amazon::Ecs.options = {
-  :associate_tag =>     'wwc10a-20',
-  :AWS_access_key_id => 'AKIAJBCIOO5EWF6JKYIQ',
-  :AWS_secret_key =>    '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',
-  :country =>:us
+  :associate_tag =>     'XXX',
+  :AWS_access_key_id => 'XXX',
+  :AWS_secret_key =>    'XXX',
+  :country =>:us,
 }

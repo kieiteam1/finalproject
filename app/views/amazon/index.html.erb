@@ -13,9 +13,9 @@
 <style>
 body {
       padding-top: 100px;
-      padding-left: 20px;
+      /*padding-left: 20px;
       padding-right: 20px;
-      }
+      */}
 </style>
 
 <body>
@@ -26,7 +26,7 @@ body {
   <%= text_field_tag "keyword", @keyword %><%= submit_tag "Find items at Amazon" %>
 <%- end -%>
 
-<form class="col-md-3">
+<!-- <form class="col-md-3">
   <label class="control-label">
     <div class="form-group">
       <label>Input the item keyword:</label>
@@ -38,7 +38,7 @@ body {
   or
   <%= link_to "Cancel", "/" %>
 </form>
-
+ -->
 
 <%- if @items && @items.size > 0 -%>
 <p>Search Result</p>
