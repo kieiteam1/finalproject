@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="us" xml:lang="us">
+<head>
+<meta http-equiv="Content-Language" content="us" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="imagetoolbar" content="no" />
+<title>Amazon Web Service</title>
+<%#= stylesheet_link_tag "screen", :media => "all" %>
+</head>
+
+<style>
+body {
+      padding-top: 100px;
+      padding-left: 20px;
+      padding-right: 20px;
+      }
+</style>
+
+<body>
+<!-- # <%= @content_for_layout %> -->
+
+<p>Find items at Amazon</p>
+<%- form_tag :controller => 'amazon', :action => 'index' do -%>
+  <%= text_field_tag "keyword", @keyword %><%= submit_tag "Find items at Amazon" %>
+<%- end -%>
+
+<form class="col-md-3">
+  <label class="control-label">
+    <div class="form-group">
+      <label>Input the item keyword:</label>
+      <input name="keyword" type="text" class="form-control input-sm" placeholder="Keyword...">
+    </div>
+  </label>
+
+  <button type="submit" action="/amazon/index" class="btn btn-success btn-md">Sign Up!</button>
+  or
+  <%= link_to "Cancel", "/" %>
+</form>
+
+
+<%- if @items && @items.size > 0 -%>
+<p>Search Result</p>
+<table>
+  <%- @items.each do |item| -%>
+  <tr>
+    <td><%= link_to(image_tag(item.image[:url], :size => "#{item.image[:width]}x#{item.image[:height]}", :alt => item.title), item.url, :target => '_blank') %></td>
+    <td><%= item.asin %></td>
+    <td><%= item.title %></td>
+  </tr>
+  <%- end -%>
+</table>
+<%- end -%>
+
+</body>
+</html>

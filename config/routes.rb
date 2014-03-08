@@ -1,5 +1,9 @@
 Blog::Application.routes.draw do
 
+  get "deals/show"
+#Amazon API
+  get "/amazon/index" => "amazon#index"
+  # get "amazon/show" => "amazon#show"
 
   get "/sessions/new" => "sessions#new"
   get "/sessions/create" => "sessions#create"
