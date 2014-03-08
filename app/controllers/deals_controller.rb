@@ -31,6 +31,26 @@ class DealsController < ApplicationController
       # @filter_deal_list = @filter_deal_list.limit(3)
   end
 
+def category_list
+    if params[:cat].present?
+      filter_category = Category.find_by(:name => params[:cat])
+      @deal_list = Deal.all.where(:category_id => filter_category.id)
+      @deal_list = @deal_list.order('updated_at desc')
+      redirect_to "/deals/:cat/category_list"
+    else
+      @deal_list = Deal.all.order('updated_at desc')
+
+    end
+
+      @deal_list = @deal_list.order('updated_at desc')
+
+end
+
+  def show
+    @deal = Deal.find_by(:id => params[:deal_id])
+    @reviews = Review.where(:deal_id => @deal.id).order('created_at desc')
+  end
+
   def new
     user = User.find_by(:id => session[:user_id])
     if !user.present?

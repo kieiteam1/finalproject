@@ -2,10 +2,9 @@
   <%= link_to "Add a New Deals", "/deals/new", :class => "btn btn-md btn-success pull-right" %>
   <h1>
     Tablet Deals
-    <h3>Displaying 1 deals.</h3>
+    <small>Displaying <%= @deal_list.count %> deals.</small>
   </h1>
 </div>
-
 
 <div class="row">
                 <div class="col-md-1">
@@ -17,52 +16,41 @@
                 <div class="col-md-2">
                   <a> Posted Date </a>
                 </div>
+                <div class="col-md-1">
+                  <i class="fa fa-thumbs-up"></i> <i class="fa fa-thumbs-down"></i>
+                </div>
+
 </div>
+
+<% @deal_list.each do |deal| %>
 
   <div class="row">
 
     <div class="col-md-1">
-      <a href="/deals/aaaa/show">
-        <img width="100" src="http://ecx.images-amazon.com/images/I/31rWhdb1fXL.jpg">
+      <a href="/deals/aaa/show">
+        <img width="50" src="<%= deal.image_url %>">
       </a>
     </div>
 
     <div class="col-md-6">
-      <h3>
-        <a href="/deals/aaaa/show">Google Nexus 7 Tablet (7-Inch, 32GB, Black) by ASUS (2013)</a>
-      </h3>
+      <h5>
+        <a href="/deals/<%= deal.id %>/show"><%= deal.name %></a>
+      </h5>
 
-      <p class="lead">Deal price: $239</p>
+      <p><h6><span class="original_price">$<%= deal.original_price %></span>
+        <span class="deal_price">$<%= deal.deal_price %></span></h6></p>
      </div>
 
     <div class="col-md-2">
       <h3>
-        <p> 2014-02-12 </p>
-
+        <p> <h6>aaaa</h6> </p>
      </div>
-  </div>
-<div class="row">
 
-    <div class="col-md-1">
-      <a href="/deals/aaaa/show">
-        <img width="100" src="http://ecx.images-amazon.com/images/I/31rWhdb1fXL.jpg">
-      </a>
-    </div>
-
-    <div class="col-md-6">
+     <div class="col-md-1">
       <h3>
-        <a href="/deals/aaaa/show">Google Nexus 7 Tablet (7-Inch, 32GB, Black) by ASUS (2013)</a>
-      </h3>
-
-      <p class="lead">Deal price: $239</p>
+        <p> <h6>aaaa</h6> </p>
      </div>
 
-    <div class="col-md-2">
-      <h3>
-        <a> Posted Date </a> </h3>
-
-        <p> 2014-02-12 </p>
-
-     </div>
   </div>
 
+<% end %>

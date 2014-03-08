@@ -231,4 +231,35 @@ deal_list = [       { :name => "Google Nexus 7 Tablet (7-Inch, 32GB, Black) by A
 
 puts "There are now #{Deal.count} deals in the catalog."
 
+Review.destroy_all
 
+review = [       { :title => "Amazing!",
+                   :deal_id => 1,
+                   :user_id => 1,
+                   :comment => "Thanks OP. I love this product." ,
+                   :rating => 5,
+                },
+                 { :title => "Woooooow!",
+                   :deal_id => 2,
+                   :user_id => 2,
+                   :comment => "Thanks, I bought this for my wife. She really likes it." ,
+                   :rating => 4,
+                },
+                 { :title => "OMG!!!",
+                   :deal_id => 2,
+                   :user_id => 3,
+                   :comment => "This product is amazing!!! Thanks OP." ,
+                   :rating => 5,
+                }  ]
+
+  review.each do |review|
+   r = Review.new
+   r.title = review[:title]
+   r.deal_id = review[:deal_id]
+   r.user_id = review[:user_id]
+   r.comment = review[:comment]
+   r.rating = review[:rating]
+   r. save
+  end
+
+puts "There are now #{Review.count} reviews in the catalog."
