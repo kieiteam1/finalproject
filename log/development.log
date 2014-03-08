@@ -65894,3 +65894,437 @@ Migrating to CreateCategories (20140301041738)
   [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140301041738"]]
   [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
 Migrating to CreateAmazonItems (20140308011620)
+
+
+Started GET "/about/index" for 127.0.0.1 at 2014-03-07 20:50:30 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (Migrations are pending; run 'bin/rake db:migrate RAILS_ENV=development' to resolve this issue.):
+  activerecord (4.0.2) lib/active_record/migration.rb:379:in `check_pending!'
+  activerecord (4.0.2) lib/active_record/migration.rb:366:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__2872147174184185972__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/jumpei/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/jumpei/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/jumpei/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/jumpei/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered /Users/jumpei/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered /Users/jumpei/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.7ms)
+  Rendered /Users/jumpei/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (72.1ms)
+
+
+Started GET "/about/index" for 127.0.0.1 at 2014-03-07 20:50:31 -0600
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+ActiveRecord::PendingMigrationError (Migrations are pending; run 'bin/rake db:migrate RAILS_ENV=development' to resolve this issue.):
+  activerecord (4.0.2) lib/active_record/migration.rb:379:in `check_pending!'
+  activerecord (4.0.2) lib/active_record/migration.rb:366:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__2872147174184185972__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/jumpei/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/jumpei/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/jumpei/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/jumpei/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.9ms)
+  Rendered /Users/jumpei/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.6ms)
+  Rendered /Users/jumpei/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+  Rendered /Users/jumpei/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (48.4ms)
+
+
+Started GET "/about/index" for 127.0.0.1 at 2014-03-07 20:50:34 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (Migrations are pending; run 'bin/rake db:migrate RAILS_ENV=development' to resolve this issue.):
+  activerecord (4.0.2) lib/active_record/migration.rb:379:in `check_pending!'
+  activerecord (4.0.2) lib/active_record/migration.rb:366:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__2872147174184185972__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/jumpei/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/jumpei/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/jumpei/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/jumpei/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /Users/jumpei/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.9ms)
+  Rendered /Users/jumpei/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.9ms)
+  Rendered /Users/jumpei/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (56.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-07 20:50:34 -0600
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+ActiveRecord::PendingMigrationError (Migrations are pending; run 'bin/rake db:migrate RAILS_ENV=development' to resolve this issue.):
+  activerecord (4.0.2) lib/active_record/migration.rb:379:in `check_pending!'
+  activerecord (4.0.2) lib/active_record/migration.rb:366:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__2872147174184185972__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/jumpei/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/jumpei/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/jumpei/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/jumpei/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /Users/jumpei/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.6ms)
+  Rendered /Users/jumpei/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+  Rendered /Users/jumpei/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (83.2ms)
+  [1m[36m (2.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (1.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateDeals (20140227043850)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (1.5ms)[0m  [1mCREATE TABLE "deals" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "original_price" integer, "deal_price" integer, "product_id" integer, "category_id" integer, "image_url" varchar(255), "description" varchar(255), "user_id" integer, "link" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140227043850"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateUsers (20140227044042)
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "password" varchar(255), "zipcode" integer, "prf_category_id" integer, "prf_product_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140227044042"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+Migrating to CreateProducts (20140227054116)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "category_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140227054116"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreateCategories (20140301041738)
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (1.5ms)[0m  [1mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140301041738"]]
+  [1m[36m (4.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateAmazonItems (20140308011620)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (4.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (2.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateDeals (20140227043850)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (1.3ms)[0m  [1mCREATE TABLE "deals" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "original_price" integer, "deal_price" integer, "product_id" integer, "category_id" integer, "image_url" varchar(255), "description" varchar(255), "user_id" integer, "link" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140227043850"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateUsers (20140227044042)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "password" varchar(255), "zipcode" integer, "prf_category_id" integer, "prf_product_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140227044042"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreateProducts (20140227054116)
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (1.5ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "category_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140227054116"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateCategories (20140301041738)
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140301041738"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (12.3ms)[0m  INSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "prf_category_id", "prf_product_id", "updated_at", "zipcode") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00], ["email", "wshin20@kellogg.northwestern.edu"], ["first_name", "Wooil"], ["last_name", "Shin"], ["password", "W"], ["prf_category_id", 1], ["prf_product_id", 1], ["updated_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00], ["zipcode", 10219]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "prf_category_id", "prf_product_id", "updated_at", "zipcode") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00], ["email", "dylan@dylan.northwestern.edu"], ["first_name", "Dylan"], ["last_name", "Jeon"], ["password", "D"], ["prf_category_id", 2], ["prf_product_id", 1], ["updated_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00], ["zipcode", 10219]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("created_at", "email", "first_name", "last_name", "password", "prf_category_id", "prf_product_id", "updated_at", "zipcode") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00], ["email", "jumpei@jumpei.northwestern.edu"], ["first_name", "Jumpei"], ["last_name", "Nakamura"], ["password", "J"], ["prf_category_id", 1], ["prf_product_id", 2], ["updated_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00], ["zipcode", 10219]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00], ["name", "Tablet"], ["updated_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00], ["name", "Cellphone"], ["updated_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "categories" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00], ["name", "Other"], ["updated_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35mProduct Load (0.6ms)[0m  SELECT "products".* FROM "products"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "products" ("category_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["category_id", 1], ["created_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00], ["name", "Nexus 7"], ["updated_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "products" ("category_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["category_id", 1], ["created_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00], ["name", "Kindle Fire HDX"], ["updated_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.1ms)[0m  INSERT INTO "products" ("category_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["category_id", 1], ["created_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00], ["name", "Samsung Galaxy Tab"], ["updated_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "products" ("category_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["category_id", 2], ["created_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00], ["name", "iPhone 4"], ["updated_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "products" ("category_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["category_id", 2], ["created_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00], ["name", "Samsung Galaxy S"], ["updated_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "products" ("category_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["category_id", 2], ["created_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00], ["name", "Motorola MOTOLUXE XT615"], ["updated_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "products" ("category_id", "created_at", "name", "updated_at") VALUES (?, ?, ?, ?)  [["category_id", 3], ["created_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00], ["name", "Garmin nüvi 40LM"], ["updated_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "products"
+  [1m[36mDeal Load (0.6ms)[0m  [1mSELECT "deals".* FROM "deals"[0m
+  [1m[35m (1.8ms)[0m  begin transaction
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "deals" ("category_id", "created_at", "deal_price", "description", "image_url", "link", "name", "original_price", "product_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["category_id", 1], ["created_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00], ["deal_price", 239], ["description", "World's sharpest 7 tablet screen (323 ppi). Powerful battery, up to 9 hrs of active use. Quad-core speed and performance, 2GB RAMs with Android 4.3."], ["image_url", "http://ecx.images-amazon.com/images/I/31rWhdb1fXL.jpg"], ["link", "http://google.com"], ["name", "Google Nexus 7 Tablet (7-Inch, 32GB, Black) by ASUS (2013)"], ["original_price", 269], ["product_id", 1], ["updated_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "deals" ("category_id", "created_at", "deal_price", "description", "image_url", "link", "name", "original_price", "product_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["category_id", 1], ["created_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00], ["deal_price", 239], ["description", "World sharpest 7 tablet screen (323 ppi). Powerful battery, up to 9 hrs of active use. Quad-core speed and performance, 2GB RAMs with Android 4.3."], ["image_url", "http://ecx.images-amazon.com/images/I/31rWhdb1fXL.jpg"], ["link", "http://google.com"], ["name", "Kindle Fire HDX 7 Tablet"], ["original_price", 269], ["product_id", 2], ["updated_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "deals" ("category_id", "created_at", "deal_price", "description", "image_url", "link", "name", "original_price", "product_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["category_id", 1], ["created_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00], ["deal_price", 200], ["description", "Weight 3g, 850/1900 Whitensity (323 PPI)"], ["image_url", "http://ecx.images-amazon.com/images/I/41rTQCo5K5L._SY355_.jpg"], ["link", "http://google.com"], ["name", "Samsung Galaxy Tab 3 lite"], ["original_price", 260], ["product_id", 5], ["updated_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "deals" ("category_id", "created_at", "deal_price", "description", "image_url", "link", "name", "original_price", "product_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["category_id", 2], ["created_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00], ["deal_price", 120], ["description", "Size 16 GB, CDMA Verizon phone only, does NOT have a SIM card"], ["image_url", "http://ecx.images-amazon.com/images/I/41eVAfYDANL._SL500_AA300_.jpg"], ["link", "http://google.com"], ["name", "APPLE iPhone 4 16GB, CDMA version,2011"], ["original_price", 214], ["product_id", 1], ["updated_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "deals" ("category_id", "created_at", "deal_price", "description", "image_url", "link", "name", "original_price", "product_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["category_id", 2], ["created_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00], ["deal_price", 130], ["description", "4GB Internal Memory, Blackberry OS 7, 3G and 5MP Camera"], ["image_url", "http://ecx.images-amazon.com/images/I/41G5JYQ%2BRsL._AA160_.jpg"], ["link", "http://google.com"], ["name", "Blackberry Torch 9860 Phone"], ["original_price", 137], ["product_id", 3], ["updated_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "deals" ("category_id", "created_at", "deal_price", "description", "image_url", "link", "name", "original_price", "product_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["category_id", 2], ["created_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00], ["deal_price", 200], ["description", "Dual SIM, Android 4.0 OS4, Touchscreen, GPS"], ["image_url", "http://ecx.images-amazon.com/images/I/51%2Bsi3hm8LL._SX385_.jpg"], ["link", "http://google.com"], ["name", "Samsung Galaxy S DUOS S7562 GSM Phone "], ["original_price", 244], ["product_id", 4], ["updated_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "deals" ("category_id", "created_at", "deal_price", "description", "image_url", "link", "name", "original_price", "product_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["category_id", 2], ["created_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00], ["deal_price", 180], ["description", "Touchscreen, Android 2.3 OS, 8MP"], ["image_url", "http://ecx.images-amazon.com/images/I/512%2BzQfSV7L._AA160_.jpg"], ["link", "http://google.com"], ["name", "Motorola MOTOLUXE XT615 GSM Phone "], ["original_price", 199], ["product_id", 5], ["updated_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "deals" ("category_id", "created_at", "deal_price", "description", "image_url", "link", "name", "original_price", "product_id", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["category_id", 3], ["created_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00], ["deal_price", 80], ["description", "Lifetime maps, data cards: microSD,Speed limit indicator"], ["image_url", "http://ecx.images-amazon.com/images/I/512nvv9FmeL._AA160_.jpg"], ["link", "http://google.com"], ["name", "Garmin nüvi 40LM 4.3-Inch Portable GPS Navigator"], ["original_price", 89], ["product_id", 1], ["updated_at", Sat, 08 Mar 2014 02:51:46 UTC +00:00]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "deals"
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-07 20:51:57 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DealsController#index as HTML
+  [1m[35mDeal Load (0.8ms)[0m  SELECT "deals".* FROM "deals" ORDER BY updated_at desc LIMIT 3
+  Rendered deals/index.html.erb within layouts/application (42.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+Completed 200 OK in 507ms (Views: 426.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/about.css?body=1" for 127.0.0.1 at 2014-03-07 20:51:58 -0600
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2014-03-07 20:51:58 -0600
+
+
+Started GET "/assets/amazon.css?body=1" for 127.0.0.1 at 2014-03-07 20:51:58 -0600
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-03-07 20:51:58 -0600
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2014-03-07 20:51:58 -0600
+
+
+Started GET "/assets/deals.css?body=1" for 127.0.0.1 at 2014-03-07 20:51:58 -0600
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-03-07 20:51:58 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-07 20:51:58 -0600
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-03-07 20:51:58 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-03-07 20:51:58 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-07 20:51:58 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-07 20:51:58 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-07 20:51:58 -0600
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2014-03-07 20:51:58 -0600
+
+
+Started GET "/assets/amazon.js?body=1" for 127.0.0.1 at 2014-03-07 20:51:58 -0600
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2014-03-07 20:51:58 -0600
+
+
+Started GET "/assets/deals.js?body=1" for 127.0.0.1 at 2014-03-07 20:51:58 -0600
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-03-07 20:51:58 -0600
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2014-03-07 20:51:58 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-03-07 20:51:58 -0600
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-03-07 20:51:58 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-03-07 20:51:58 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-07 20:51:58 -0600
+
+
+Started GET "/deals?cat=Tablet" for 127.0.0.1 at 2014-03-07 20:52:00 -0600
+Processing by DealsController#index as HTML
+  Parameters: {"cat"=>"Tablet"}
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."name" = 'Tablet' LIMIT 1
+Redirected to http://localhost:3000/deals/:cat/category_list
+Completed 302 Found in 35ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/deals/:cat/category_list" for 127.0.0.1 at 2014-03-07 20:52:01 -0600
+Processing by DealsController#category_list as HTML
+  Parameters: {"category_id"=>":cat"}
+  Rendered deals/category_list.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+Completed 200 OK in 35ms (Views: 32.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/deals?cat=Cellphone" for 127.0.0.1 at 2014-03-07 20:52:02 -0600
+Processing by DealsController#index as HTML
+  Parameters: {"cat"=>"Cellphone"}
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."name" = 'Cellphone' LIMIT 1
+Redirected to http://localhost:3000/deals/:cat/category_list
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/deals/:cat/category_list" for 127.0.0.1 at 2014-03-07 20:52:02 -0600
+Processing by DealsController#category_list as HTML
+  Parameters: {"category_id"=>":cat"}
+  Rendered deals/category_list.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+Completed 200 OK in 34ms (Views: 31.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-07 20:52:03 -0600
+Processing by DealsController#index as HTML
+  [1m[35mDeal Load (0.9ms)[0m  SELECT "deals".* FROM "deals" ORDER BY updated_at desc LIMIT 3
+  Rendered deals/index.html.erb within layouts/application (9.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1[0m
+Completed 200 OK in 44ms (Views: 40.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/about/index" for 127.0.0.1 at 2014-03-07 20:52:03 -0600
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (1.1ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+Completed 200 OK in 44ms (Views: 40.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/deals?cat=Other" for 127.0.0.1 at 2014-03-07 20:52:04 -0600
+Processing by DealsController#index as HTML
+  Parameters: {"cat"=>"Other"}
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."name" = 'Other' LIMIT 1[0m
+Redirected to http://localhost:3000/deals/:cat/category_list
+Completed 302 Found in 9ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/deals/:cat/category_list" for 127.0.0.1 at 2014-03-07 20:52:04 -0600
+Processing by DealsController#category_list as HTML
+  Parameters: {"category_id"=>":cat"}
+  Rendered deals/category_list.html.erb within layouts/application (0.4ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 4 LIMIT 1
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.4ms)
