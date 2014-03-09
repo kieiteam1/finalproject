@@ -47,8 +47,8 @@
      </div>
 
 
-   <% review = Review.all.where(:deal_id => deal.name) %>
-   <% review.each do |review| %>
+   <% @review = Review.all.where(:deal_id => deal.id) %>
+   <% @review.each do |review| %>
      <div class="col-md-1">
       <h3>
         <p> <h6>

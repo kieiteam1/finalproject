@@ -1,14 +1,24 @@
-<% user = User.find_by(:id => session[:user_id]) %>
+
+<% user = User.find_by(:id => params[:user_id]) %>
 <h3><%= user.first_name %>'s Profile</h3>
 
-<%= prf_category = Category.find_by(:id => user[:prf_category_id]) %>
-<%= prf_category_name = prf_category.name %>
-<%= prf_product = Product.find_by(:id => user[:prf_product_id]) %>
-<%= prf_product_name = prf_product.name %>
+<% prf_category = Category.find_by(:id => user[:prf_category_id]) %>
+<% prf_category_name = prf_category.name %>
+<% prf_product = Product.find_by(:id => user[:prf_product_id]) %>
+<% prf_product_name = prf_product.name %>
 
+<div>
+  Your Email Address: <%= user.email %>
+</div>
 <div>
   Your Prefered Category: <%= prf_category.name %>
 </div>
 <div>
   Your Prefered Product: <%= prf_product.name %>
 </div>
+
+<br>
+
+ <button type="button"  "pull-left" class="btn btn-info">
+          <%= link_to "Edit your profile", "/users/:user_id/edit" %>
+ </button>

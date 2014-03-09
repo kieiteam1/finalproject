@@ -46,8 +46,6 @@ def category_list
     end
 
       @deal_list = Deal.all.order('updated_at desc')
-      @reviews = Review.all.where(:deal_id => @deal_list.id)
-
 
 end
 

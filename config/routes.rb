@@ -1,6 +1,7 @@
 Blog::Application.routes.draw do
 
-  get "deals/show"
+
+    get "deals/show"
 #Amazon API
   get "/amazon/index" => "amazon#index"
   # get "amazon/show" => "amazon#show"
@@ -13,6 +14,8 @@ Blog::Application.routes.draw do
   get "/users/new" => "users#new"
   get "/users/create" => "users#create"
   get "/users/:user_id/show" => "users#show"
+  get "/users/:user_id/edit" => "users#edit"
+  get "/users/:user_id/updateshow" => "users#update"
 
 #Deals
   get "/deals/index" => "deals#index"
