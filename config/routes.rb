@@ -13,14 +13,15 @@ Blog::Application.routes.draw do
 #Users
   get "/users/new" => "users#new"
   get "/users/create" => "users#create"
-  get "/users/:user_id/show" => "users#show"
+  get "/users" => "users#show"
+  get "/users/show/" => "users#show"
   get "/users/:user_id/edit" => "users#edit"
   get "/users/:user_id/updateshow" => "users#update"
 
 #Deals
   get "/deals/index" => "deals#index"
   get "/" => "deals#index"
-  get "/deals/:category_id/category_list" => "deals#category_list"
+  get "/deals/" => "deals#category_list"
 
   #CREATE
   get "/deals/new" => "deals#new"

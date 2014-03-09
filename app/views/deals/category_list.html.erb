@@ -1,7 +1,7 @@
 <div class="page-header">
   <%= link_to "Add a New Deals", "/deals/new", :class => "btn btn-md btn-success pull-right" %>
   <h1>
-    Tablet Deals
+
     <small>Displaying <%= @deal_list.count %> deals.</small>
   </h1>
 </div>
@@ -13,10 +13,10 @@
                 <div class="col-md-6">
                   <a> Deals </a>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3">
                   <a> Posted Date </a>
                 </div>
-                <div class="col-md-1">
+                <div class="col-md-2">
                   <i class="fa fa-thumbs-up"></i> <i class="fa fa-thumbs-down"></i>
                 </div>
 
@@ -41,24 +41,16 @@
         <span class="deal_price">$<%= deal.deal_price %></span></h6></p>
      </div>
 
-     <div class="col-md-2">
+     <div class="col-md-3">
       <h3>
         <p> <h6><%= deal.created_at %></h6> </p>
      </div>
 
-
-   <% @review = Review.all.where(:deal_id => deal.id) %>
-   <% @review.each do |review| %>
-     <div class="col-md-1">
-      <h3>
-        <p> <h6>
-
-    <% review.rating.times do %>
-                &starf;
-    <% end %>
-        </h6> </p>
+     <div class="col-md-2">
+      <h6>
+      <p>aaaaaaaaaaaaaa</p></h6>
      </div>
-<% end %>
-</div>
 
+</div>
+<% end %>
 

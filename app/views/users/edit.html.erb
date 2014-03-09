@@ -2,9 +2,9 @@
   <h1>Edit your profile</h1>
 </div>
 
+<% user = User.find_by(:id => params[:user_id]) %>
 
-
-<form action="/users/:user.id/update" class="col-md-3">
+<form action="/users/update" class="col-md-3">
 
 <label class="control-label">
   <div class="form-group">
@@ -37,7 +37,7 @@
   </div>
 </label>
 
-  <button type="submit" action="/users/:user_id/update" class="btn btn-success btn-md">Done!</button>
+  <button type="submit" class="btn btn-success btn-md">Done!</button>
   or
   <%= link_to "Cancel", "/" %>
 </form>

@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     user.prf_category_id = params["prf_category_id"]
     user.prf_product_id = params["prf_product_id"]
     user.save
-    redirect_to "/sessions/create", notice: "Welcome!"
+    redirect_to "/sessions/new", notice: "Welcome!"
   end
 
   def update
@@ -31,9 +31,21 @@ class UsersController < ApplicationController
 
   def edit
     user = User.find_by(:id => params[:user_id])
+    redirect_to "/users/:user_id/edit"
+
+    # if params[:cat].present?
+    #   filter_category = Category.find_by(:name => params[:cat])
+    #   @deal_list = Deal.all.where(:category_id => filter_category.id)
+    #   @deal_list = @deal_list.order('updated_at desc')
+    #   redirect_to "/deals/:cat/category_list"
+
+    #   user = User.find_by(:id => params[:user_id])
+
   end
 
   def show
+    # user = User.find_by(:id => params[:user_id])
+    # redirect_to "/users/:user_id/show"
   end
 
 end
