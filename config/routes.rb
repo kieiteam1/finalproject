@@ -1,7 +1,7 @@
 Blog::Application.routes.draw do
 
 
-    get "deals/show"
+
 #Amazon API
   get "/amazon/index" => "amazon#index"
   # get "amazon/show" => "amazon#show"
@@ -13,9 +13,8 @@ Blog::Application.routes.draw do
 #Users
   get "/users/new" => "users#new"
   get "/users/create" => "users#create"
-  get "/users" => "users#show"
-  get "/users/show/" => "users#show"
-  get "/users/:user_id/edit" => "users#edit"
+  get "/users/show" => "users#show"
+  get "/users/edit" => "users#edit"
   get "/users/:user_id/updateshow" => "users#update"
 
 #Deals
@@ -38,11 +37,12 @@ Blog::Application.routes.draw do
   #DELETE
   get "/deals/:deal_id/delete" => "deals#delete"
 
-  get "about/index" => "about#index"
 
+  get "/about/index" => "about#index"
 
-  get "products/index"
-  get "reviews/create" => "reviews#create"
+  get "/googlemap/location" => "googlemap#location"
+
+  get "/reviews/create" => "reviews#create"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
