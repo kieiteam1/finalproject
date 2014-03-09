@@ -41,16 +41,24 @@
         <span class="deal_price">$<%= deal.deal_price %></span></h6></p>
      </div>
 
-    <div class="col-md-2">
+     <div class="col-md-2">
       <h3>
-        <p> <h6>aaaa</h6> </p>
+        <p> <h6><%= deal.created_at %></h6> </p>
      </div>
 
+
+   <% review = Review.all.where(:deal_id => deal.name) %>
+   <% review.each do |review| %>
      <div class="col-md-1">
       <h3>
-        <p> <h6>aaaa</h6> </p>
+        <p> <h6>
+
+    <% review.rating.times do %>
+                &starf;
+    <% end %>
+        </h6> </p>
      </div>
-
-  </div>
-
 <% end %>
+</div>
+
+

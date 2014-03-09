@@ -259,7 +259,7 @@ review = [       { :title => "Amazing!",
    r.user_id = review[:user_id]
    r.comment = review[:comment]
    r.rating = review[:rating]
-   r. save
+   r.save
   end
 
 puts "There are now #{Review.count} reviews in the catalog."

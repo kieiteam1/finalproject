@@ -28,9 +28,8 @@
                 &starf;
               <% end %>
                 <p><%= review.title %></p>
-                <p>by <%= User.find_by(:id => review.user_id).first_name %></p>
                 <p><%= review.comment %></p>
-
+                <p>by <%= User.find_by(:id => review.user_id).first_name %></p>
           </div>
         </div>
 
